@@ -20,4 +20,4 @@ jobs:
       run: |
            docker pull fluidattacks/forces:new
            docker images
-           docker run --rm -i fluidattacks/forces:new forces --token ${env.ftoken} -vv
+           docker run --rm -i fluidattacks/forces:new forces --token ${{env.ftoken}} -vv
