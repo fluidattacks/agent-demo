@@ -7,17 +7,12 @@ on:
     branches: [ main ]
 
 jobs:
-
-  build:
-
+  forces: 
     runs-on: ubuntu-latest
-    env:
-      ftoken: ${{ secrets.FTOKEN }}
-      
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: |
-           docker pull fluidattacks/forces:new
-           docker images
-           docker run --rm -i fluidattacks/forces:new forces --token ${{env.ftoken}} -vv
+    container:
+      image: fluidattacks/forces:new
+      env:
+        ftoken: ${{ secrets.FTOKEN }}
+    steps: 
+      - name: Run Forces
+        run: forces --token "${ftoken}" -vv
