@@ -15,4 +15,4 @@ jobs:
         ftoken: ${{ secrets.FTOKEN }}
     steps: 
       - name: Run Forces
-        run: forces --token "${ftoken}" --vv --strict
+        run: forces --token "${ftoken}" -vv -strict
