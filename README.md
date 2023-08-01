@@ -6,5 +6,4 @@ Thanks for your attention!
 Hello there :)
 This is a test.
 Once again.
-God Help me.
 
